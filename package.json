@@ -1,0 +1,26 @@
+{
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
+  },
+  "name": "sample_project",
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "prebuild": "npm run prebuild --workspaces --if-present",
+    "pretest": "npm run prebuild --workspaces --if-present",
+    "start": "npm start --workspaces --if-present",
+    "test": "npm test --workspaces --if-present"
+  },
+  "type": "module",
+  "workspaces": [
+    "src/sample_project_frontend"
+  ],
+  "dependencies": {
+    "openai": "^4.76.0",
+    "openapi": "^1.0.1",
+    "axios": "^0.21.1", 
+    "body-parser": "^1.19.0", 
+    "dotenv": "^10.0.0", 
+    "express": "^4.17.1"
+  }
+}
